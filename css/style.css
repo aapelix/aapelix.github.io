@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 
 :root {
   --default-font: rgb(219, 219, 219);
@@ -10,7 +10,7 @@ body {
   background-image: url(/imgs/blurry-gradient-haikei.png);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Source Code Pro", monospace;
 
   margin: 0;
 }
@@ -29,7 +29,7 @@ body {
 }
 
 .container section {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -50,19 +50,39 @@ body {
 }
 
 .container section h1 {
+  margin-top: 130px;
   font-size: 60px;
+  position: relative;
+  place-content: center;
+  text-align: center;
 }
 
-.container section h2 {
-  font-size: 40px;
+.typeani {
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  animation: typing 2s steps(15), cursor 0.4s step-end infinite alternate;
 }
 
-.container section:nth-child(1) h2 {
-  top: 53vh;
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.container section:nth-child(1) h2,
 .container section:nth-child(2) h2 {
-  top: 53vh;
+  margin-top: -650px;
+  font-size: 40px;
 }
 
 .mobilemenu {
@@ -310,6 +330,17 @@ li svg {
   font-size: 40px;
 }
 
+.tiles {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+}
+
+.tile {
+  outline: 1px solid white;
+}
+
 @media screen and (min-width: 992px) {
   .navtext {
     display: none;
@@ -326,6 +357,16 @@ li svg {
 @media screen and (max-width: 992px) {
   .computermenu li a {
     display: none;
+  }
+
+  .container section h1 {
+    font-size: 40px;
+    position: relative;
+  }
+
+  .container section:nth-child(2) h2 {
+    position: absolute;
+    top: 235vh;
   }
 
   .bottom .links a {
