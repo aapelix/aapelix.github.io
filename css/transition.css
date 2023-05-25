@@ -1,0 +1,16 @@
+.transition-fade {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 500ms;
+  transform-origin: left;
+}
+
+html.is-animating .transition-fade {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateY(-100%);
+}
