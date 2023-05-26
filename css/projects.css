@@ -2,16 +2,7 @@ body {
   background-image: url(/imgs/blurry-gradient-haikei1.png);
 }
 
-.container {
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  text-align: center;
-}
-
-.container section {
+x .container section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +13,8 @@ body {
 
 .btn-grad {
   position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   background-image: linear-gradient(
     to right,
     #1fa2ff 0%,
@@ -49,7 +42,6 @@ body {
 @media screen and (max-width: 600px) {
   .container section:nth-child(2) h2 {
     position: absolute;
-    top: 164vh;
   }
 
   .btn-grad {

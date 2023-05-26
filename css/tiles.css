@@ -71,30 +71,3 @@
   inset: 0.5px;
   position: absolute;
 }
-
-#title {
-  color: white;
-  font-family: "Rubik", sans-serif;
-  font-size: 6vw;
-  margin: 0px;
-  pointer-events: none;
-  transition: opacity 1200ms ease;
-  width: 50vw;
-  z-index: 3;
-}
-
-#title > .fancy {
-  color: var(--g2);
-  font-family: "Dancing Script", cursive;
-  font-size: 1.5em;
-  line-height: 0.9em;
-}
-
-#icon {
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 80vmin;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1200ms ease;
-  z-index: 1;
-}

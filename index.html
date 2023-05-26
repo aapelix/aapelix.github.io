@@ -32,11 +32,23 @@
     <script src="./scripts/transition.js" defer></script>
     <script src="./scripts/menu.js" defer></script>
     <script src="/node_modules/animejs/lib/anime.min.js" defer></script>
-    <script src="/scripts/animejs.js" defer></script>
+    <script src="/scripts/grid.js" defer></script>
+    <script src="/scripts/animations.js" defer></script>
 
     <link rel="stylesheet" href="./css/transition.css" />
     <link rel="stylesheet" href="./css/tiles.css">
   </head>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5N9NJ2SPV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-S5N9NJ2SPV');
+  </script>
+
   <body>
     <div class="mobilenavbartop">
       <svg width="1237" height="425" viewBox="0 0 1237 425" fill="none" xmlns="http://www.w3.org/2000/svg" class="navtext">
@@ -89,15 +101,12 @@
         <li>
           <a href="https://twitter.com/aapelix1">Twitter</a>
         </li>
-        <li>
-          <a href="https://bmc.link/aapelix">Buy me coffee</a>
-        </li>
       </ul>
     </div>
     <div class="navbar" id="navbar">
       <div class="computermenu" id="menu">
         <ul>
-          <li>
+          <li class="navbarani">
             <a href="./index">
               <svg
                 width="256"
@@ -110,44 +119,39 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="navbarani">
             <a href="https://www.aapelix.online">
               <i class="fa-solid fa-house"></i>
             </a>
           </li>
-          <li>
+          <li class="navbarani">
             <a href="./docs/home">
               <i class="fa-solid fa-book"></i>
             </a>
           </li>
-          <li>
+          <li class="navbarani">
             <a href="./projects">
               <i class="fa-solid fa-folder"></i>
             </a>
           </li>
-          <li>
+          <li class="navbarani">
             <a href="https://github.com/aapelix">
               <i class="fa-brands fa-github"></i>
             </a>
           </li>
-          <li>
+          <li class="navbarani">
             <a href="https://youtube.com/@aapelix">
               <i class="fa-brands fa-youtube"></i>
             </a>
           </li>
-          <li>
+          <li class="navbarani">
             <a href="">
               <i class="fa-brands fa-discord"></i>
             </a>
           </li>
-          <li>
+          <li class="navbarani">
             <a href="https://twitter.com/aapelix1">
               <i class="fa-brands fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://bmc.link/aapelix">
-              <i class="fa-solid fa-mug-hot"></i>
             </a>
           </li>
         </ul>
@@ -157,9 +161,10 @@
     <div id="swup" class="container transition-fade main">
       <section>
         <h1 class="typeani">It's I, Aapelix</h1>
-        <h2>
+        <h2 class="mainani">
           Programmer from Finland
         </h2>
+        <img src="/imgs/body.png" alt="My minecraft skin" class="imgani">
       </section>
       <section>
         <h1>Who i am?</h1>
