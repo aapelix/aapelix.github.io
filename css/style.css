@@ -364,9 +364,14 @@ li svg {
     position: relative;
   }
 
+  .container section:nth-child(1) h2 {
+    position: absolute;
+    top: 145vh;
+  }
+
   .container section:nth-child(2) h2 {
     position: absolute;
-    top: 235vh;
+    top: 240vh;
   }
 
   .bottom .links a {
