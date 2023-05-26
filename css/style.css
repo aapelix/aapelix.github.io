@@ -67,6 +67,13 @@ body {
   animation: typing 2s steps(15), cursor 0.4s step-end infinite alternate;
 }
 
+.container section:nth-child(1) img {
+  width: 300px;
+  position: absolute;
+  left: 300px;
+  top: -400px;
+}
+
 @keyframes cursor {
   50% {
     border-color: transparent;
@@ -81,7 +88,7 @@ body {
 
 .container section:nth-child(1) h2,
 .container section:nth-child(2) h2 {
-  margin-top: -650px;
+  margin-top: -500px;
   font-size: 40px;
 }
 
@@ -99,9 +106,6 @@ body {
   display: inline;
   float: left;
   padding-top: 0;
-  animation-name: navbar;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
 }
 
 .toggle {
@@ -274,7 +278,7 @@ li svg {
   width: 100%;
   height: 90px;
   position: fixed;
-  left: 50%;
+  left: 0%;
   transform: translate(-50%, 0);
   display: flex;
   text-align: center;
@@ -398,6 +402,26 @@ li svg {
 /* Small screens */
 @media screen and (max-width: 600px) {
   .computermenu li a {
+    display: none;
+  }
+
+  .container section:nth-child(1) h1 {
+    top: -200px;
+  }
+
+  .container section:nth-child(1) h2 {
+    top: 1000px;
+  }
+
+  .container section:nth-child(2) h1 {
+    top: -200px;
+  }
+
+  .container section:nth-child(2) h2 {
+    top: 1900px;
+  }
+
+  .container section:nth-child(1) img {
     display: none;
   }
 
