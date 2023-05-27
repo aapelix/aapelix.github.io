@@ -290,38 +290,48 @@ li svg {
 }
 
 .bottom h1,
-.bottom a {
+.bottom a,
+.bottom h3 {
   color: var(--default-font);
   transition: 0.3s;
 }
 
-.bottom h1:nth-child(2) {
-  top: 30vh;
+.bottom h3 {
+  font-size: 40px;
 }
 
-.bottom .links a {
-  top: 70vh;
+.bottom input {
+  width: 400px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background: none;
+  color: var(--default-font);
+  font-size: 20px;
 }
 
-.bottom .links a:nth-child(1) {
-  left: 45.5%;
+::placeholder {
+  font-size: 20px;
 }
 
-.bottom .links a:nth-child(2) {
-  left: 48.5%;
+.bottom button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: var(--default-font);
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  transition: all 0.3s;
 }
 
-.bottom .links a:nth-child(3) {
-  left: 51.5%;
-}
-
-.bottom .links a:nth-child(4) {
-  left: 54.5%;
+.bottom button:hover {
+  background: #22272e;
 }
 
 .bottom i {
   padding: 10px;
-  font-size: 30px;
+  font-size: 40px;
   transition: 0.3s;
 }
 
@@ -396,6 +406,9 @@ li svg {
 
   .bottom .links a:nth-child(4) {
     left: 63.5%;
+  }
+  .container section:nth-child(1) img {
+    display: none;
   }
 }
 

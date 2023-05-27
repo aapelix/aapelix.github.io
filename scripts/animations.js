@@ -23,8 +23,10 @@ anime({
   direction: 'alternate',
 });
 
+
 anime({
     targets: ".imgani",
     translateY: 650,
     delay: 2000,
-})
+});
+
