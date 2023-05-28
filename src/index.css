@@ -52,6 +52,15 @@ body {
   transform: translateY(-10px);
 }
 
+.navtextmobile {
+  width: 200px;
+  height: min-content;
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  transition: all 0.3s;
+}
+
 .navtext {
   width: 200px;
   height: min-content;
@@ -125,6 +134,9 @@ body {
   }
   .navtext {
     left: 50px;
+  }
+  .navtextmobile {
+    display: none;
   }
 }
 

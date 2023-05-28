@@ -7,7 +7,7 @@ function Mobilenavbar() {
         viewBox="0 0 1244 425"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="navtext"
+        className="navtextmobile"
       >
         <rect
           x="87.1026"
