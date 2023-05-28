@@ -132,6 +132,9 @@ body {
   .navtext {
     display: block;
   }
+  .main {
+    top: 60%;
+  }
   .navbardiv {
     display: none;
   }
