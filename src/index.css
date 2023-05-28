@@ -49,7 +49,7 @@ body {
 }
 
 .navbardiv a:hover {
-  background: #5c5c5c52;
+  transform: translateY(-10px);
 }
 
 .navtext {

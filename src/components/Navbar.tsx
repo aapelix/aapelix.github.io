@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function Navbar() {
   return (
     <div className="navbardiv">
