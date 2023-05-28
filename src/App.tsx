@@ -1,33 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import Mobilenavbar from "./components/Mobilenavbar";
+import anime from "animejs/lib/anime.es.js";
+
+anime({
+  targets: ".mainani1",
+  translateY: 20,
+});
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
+      <Navbar />
+      <Mobilenavbar />
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <section className="main">
+          <h1 className="mainani1">It's I, Aapelix</h1>
+          <h2>Programmer from Finland</h2>
+        </section>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMRR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
