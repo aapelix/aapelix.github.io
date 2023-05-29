@@ -1,6 +1,7 @@
 import React from "react";
 
 import { motion } from "framer-motion";
+// @ts-ignore
 import Typed from "typed.js";
 
 import Navbar from "./components/Navbar";
