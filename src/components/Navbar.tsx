@@ -9,7 +9,14 @@ function Navbar() {
         viewBox="0 0 1244 425"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="navtext"
+        className="w-52 h-min fixed top-3 left-4 duration-300 lg:left-12"
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          })
+        }
       >
         <rect
           x="87.1026"
@@ -98,14 +105,26 @@ function Navbar() {
         <rect width="362" height="51" rx="25.5" fill="#DEECF6" />
         <rect y="374" width="362" height="51" rx="25.5" fill="#DEECF6" />
       </svg>
-      <div className="navbardiv">
-        <div className="centered-nav">
-          <a href="">Home</a>
-          <a href="">Api</a>
-          <a href="">Github</a>
-        </div>
-        <div className="right-nav">
-          <a href="">Search</a>
+      <div className="relative overflow-hidden top-0 h-20 sm:hidden">
+        <div className="float-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <a
+            href=""
+            className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
+          >
+            Home
+          </a>
+          <a
+            href=""
+            className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
+          >
+            Api
+          </a>
+          <a
+            href=""
+            className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
+          >
+            Github
+          </a>
         </div>
       </div>
     </motion.div>

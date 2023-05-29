@@ -1,122 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --default: #deecf6;
+}
+
+body {
+  background: #0f172a;
 }
 
 * {
   color: #deecf6;
   font-family: "Ubuntu", sans-serif;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  background: url(/blurry-gradient-haikei.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.navbardiv {
-  position: relative;
-  overflow: hidden;
-  height: 90px;
-}
-
-.navbardiv a {
-  float: left;
-  padding: 14px 16px;
-  text-align: center;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 15px;
-  transition: all 0.3s;
-}
-
-.centered-nav {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.right-nav {
-  margin-top: 13px;
-  float: right;
-}
-
-.navbardiv a:hover {
-  transform: translateY(-10px);
-}
-
-.navtextmobile {
-  width: 200px;
-  height: min-content;
-  position: fixed;
-  top: 10px;
-  left: 15px;
-  transition: all 0.3s;
-}
-
-.navtext {
-  width: 200px;
-  height: min-content;
-  position: fixed;
-  top: 10px;
-  left: 15px;
-  transition: all 0.3s;
-}
-
-.toggle {
-  position: fixed;
-  top: 30px;
-  right: 10px;
-  width: 70px;
-  height: 70px;
-  display: flex;
-}
-
-.toggle span {
-  position: absolute;
-  background: #deecf6;
-  width: 40px;
-  height: 4px;
-  border-radius: 15px;
-}
-
-.toggle span:nth-child(1) {
-  transform: translate(20px, 15px);
-  width: 20px;
-}
-
-.toggle span:nth-child(2) {
-  transform: translate(10px, 30px);
-  width: 30px;
-}
-
-.main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 50px;
-  text-align: center;
-}
-
-.main h2 {
-  font-size: 40px;
-}
-
-.who-i-am {
-  position: relative;
-  text-align: center;
-  height: 600px;
-  top: 100vh;
-  background-color: rgb(43, 43, 43);
 }
 
 .who-i-am h1 {
@@ -128,47 +26,15 @@ body {
   font-size: 30px;
 }
 
-.shape {
-  position: absolute;
-  bottom: -150px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.shape svg {
-  position: relative;
-  display: block;
-  width: calc(110% + 1.3px);
-  height: 145px;
-}
-
-.shape .shape-fill {
-  fill: #2b2b2b;
-}
-
 @media screen and (min-width: 992px) {
-  .toggle {
-    display: none;
-  }
-  .navtext {
-    left: 50px;
-  }
   .navtextmobile {
     display: none;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .navtext {
-    display: block;
-  }
   .main {
     top: 60%;
-  }
-  .navbardiv {
-    display: none;
   }
   .who-i-am {
     margin-top: 250px;
