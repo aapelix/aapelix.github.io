@@ -128,6 +128,26 @@ body {
   font-size: 30px;
 }
 
+.shape {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.shape svg {
+  position: relative;
+  display: block;
+  width: calc(110% + 1.3px);
+  height: 145px;
+}
+
+.shape .shape-fill {
+  fill: #2b2b2b;
+}
+
 @media screen and (min-width: 992px) {
   .toggle {
     display: none;
@@ -149,5 +169,11 @@ body {
   }
   .navbardiv {
     display: none;
+  }
+  .who-i-am {
+    margin-top: 250px;
+  }
+  .shape {
+    bottom: -250px;
   }
 }
