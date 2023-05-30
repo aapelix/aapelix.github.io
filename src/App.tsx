@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 // @ts-ignore
 import Typed from "typed.js";
 
-import Navbar from "./components/Navbar";
-import Mobilenavbar from "./components/Mobilenavbar";
+import Navbar from "./components/sections/Navbar";
+import Mobilenavbar from "./components/sections/Mobilenavbar";
+import Bottom from "./components/sections/Bottom";
 
 import logo from "/LogoStroke.svg";
 
@@ -90,6 +91,7 @@ function App() {
             </p>
           </motion.div>
         </section>
+        <Bottom />
       </div>
     </>
   );
