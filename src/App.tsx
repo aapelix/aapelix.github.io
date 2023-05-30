@@ -1,6 +1,6 @@
 import React from "react";
 
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 // @ts-ignore
 import Typed from "typed.js";
 
@@ -17,6 +17,7 @@ function App() {
     const typed = new Typed(el.current, {
       strings: ["It's I, Aapelix"],
       typeSpeed: 50,
+      startDelay: 700,
     });
 
     return () => {
@@ -26,13 +27,30 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: 20 }}
+        transition={{ delay: 5 }}
+      >
+        <Navbar />
+      </motion.div>
       <Mobilenavbar />
       <div>
         <section className="absolute top-1/3 left-1/2 -translate-x-1/2 -transform-y-1/2 text-white text-7xl text-center">
           <span ref={el} />
-          <h2 className="text-5xl">Programmer from Finland</h2>
-          <motion.div animate={{ y: 100 }} whileHover={{ scale: 1.2 }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: 20 }}
+            transition={{ delay: 3 }}
+          >
+            <h2 className="text-5xl">Programmer from Finland</h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ y: 100, opacity: 1 }}
+            transition={{ delay: 4 }}
+            whileHover={{ scale: 1.2 }}
+          >
             <img
               src={logo}
               alt=""
