@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-}
 
 * {
   color: #deecf6;
@@ -14,4 +12,8 @@ body {
 
 body {
   background: #0f172a;
+}
+
+.dev {
+  font-family: "Oswald", sans-serif;
 }
