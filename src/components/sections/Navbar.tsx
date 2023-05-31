@@ -31,19 +31,19 @@ function Navbar() {
         <div className="relative overflow-hidden top-0 h-20 w-full sm:hidden">
           <div className="float-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <a
-              href=""
+              href="/index"
               className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
             >
               Home
             </a>
             <a
-              href=""
+              href="/api"
               className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
             >
               Api
             </a>
             <a
-              href=""
+              href="/github"
               className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
             >
               Github
