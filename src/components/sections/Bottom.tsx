@@ -15,7 +15,7 @@ function Bottom() {
           }
         />
         <h1
-          className="absolute right-32 text-6xl top-10 dev"
+          className="absolute right-32 text-6xl top-10 dev sm:text-5xl sm:top-14"
           onClick={() =>
             window.scrollTo({
               top: 0,

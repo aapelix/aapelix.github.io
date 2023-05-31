@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 function Navbar() {
+  const [isOpen, setOpen] = useState(false);
+  const toggleMenu = () => {
+    setOpen((open) => !open);
+  };
   return (
     <>
       <motion.div initial={{ y: -200 }} animate={{ y: 0 }}>
@@ -17,7 +22,7 @@ function Navbar() {
           }
         />
         <h1
-          className="absolute left-32 text-6xl top-2 dev"
+          className="absolute left-32 text-6xl top-2 dev sm:text-5xl sm:top-3"
           onClick={() =>
             window.scrollTo({
               top: 0,
@@ -51,7 +56,6 @@ function Navbar() {
           </div>
         </div>
       </motion.div>
-      <dialog id="menu">8</dialog>
     </>
   );
 }
