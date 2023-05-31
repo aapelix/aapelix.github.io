@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 function Navbar() {
-  const [isOpen, setOpen] = useState(false);
-  const toggleMenu = () => {
-    setOpen((open) => !open);
-  };
   return (
     <>
       <motion.div initial={{ y: -200 }} animate={{ y: 0 }}>
