@@ -4,10 +4,6 @@ import { useState } from "react";
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    setIsActive((current) => !current);
-  };
-
   return (
     <>
       <motion.div initial={{ y: -200 }} animate={{ y: 0 }}>
@@ -25,7 +21,7 @@ function Navbar() {
         />
         <h1
           className="absolute left-32 text-6xl top-2 dev sm:text-5xl sm:top-3"
-          onClick={handleClick}
+          onClick={() => setIsActive((current) => !current)}
         >
           aapelix.dev
         </h1>
