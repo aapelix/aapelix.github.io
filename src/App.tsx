@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Typed from "typed.js";
 
 import Navbar from "./components/sections/Navbar";
-import Mobilenavbar from "./components/sections/Mobilenavbar";
 import Bottom from "./components/sections/Bottom";
 
 import logo from "/LogoStroke.svg";
@@ -35,7 +34,6 @@ function App() {
       >
         <Navbar />
       </motion.div>
-      <Mobilenavbar />
       <div>
         <section className="absolute top-1/3 left-1/2 -translate-x-1/2 -transform-y-1/2 text-white text-7xl text-center">
           <span ref={el} />
@@ -75,7 +73,7 @@ function App() {
         </div>
         <section className="absolute -bottom-whoiam2 text-center h-whoiam w-full top-25 bg-whoiam sm:-bottom-whoiam3">
           <motion.div
-            initial={{ y: 200 }}
+            initial={{ y: 30 }}
             whileInView={{ y: 0 }}
             viewport={{ once: false }}
           >

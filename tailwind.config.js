@@ -13,7 +13,7 @@ export default {
     extend: {
       colors: {
         "text-white": "#deecf6",
-        "whoiam": "rgb(43, 43, 43)",
+        "whoiam": "#2b2b2b",
       },
       spacing: {
         "whoiam": "600px",
