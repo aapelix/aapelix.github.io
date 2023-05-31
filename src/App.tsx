@@ -34,7 +34,7 @@ function App() {
       >
         <Navbar />
       </motion.div>
-      <div>
+      <div className="z-10">
         <section className="absolute top-1/3 left-1/2 -translate-x-1/2 -transform-y-1/2 text-white text-7xl text-center">
           <span ref={el} />
           <motion.div
