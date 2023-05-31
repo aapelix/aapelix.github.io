@@ -44,7 +44,7 @@ function Navbar() {
               Api
             </a>
             <a
-              href="/github"
+              href="https://github.com/aapelix"
               className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
             >
               Github
@@ -69,7 +69,7 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="/github" className="">
+              <a href="https://github.com/aapelix" className="">
                 Github
               </a>
             </li>

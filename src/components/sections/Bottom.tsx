@@ -2,6 +2,26 @@ function Bottom() {
   return (
     <>
       <div className=" bg-gradient-to-t from-[#191919] to-[#2b2b2b] h-40 w-full absolute top-[calc(100%+740px)]">
+        <div className="flex">
+          <h1 className="left-1/2 -translate-x-1/2 bottom-44 absolute text-3xl text-center sm:text-2xl text-gray-400">
+            Found a bug?{" "}
+            <a
+              href="https://github.com/aapelix/aapelix.github.io"
+              className="hover:text-gray-700 duration-300"
+            >
+              Report it on GitHub!
+            </a>
+          </h1>
+          <h1 className="left-1/2 -translate-x-1/2 bottom-36 absolute text-3xl text-center sm:text-2xl sm:bottom-28 text-gray-400">
+            Need help?{" "}
+            <a
+              href="mailto:hello@aapelix.dev"
+              className="hover:text-gray-700 duration-300"
+            >
+              Email me
+            </a>
+          </h1>
+        </div>
         <img
           src="/LogoStroke.svg"
           alt="Aapelix Logo"
@@ -29,46 +49,35 @@ function Bottom() {
         <div className="absolute top-0 flex text-center left-1/2 -translate-x-1/2 pt-10">
           <ul className="pl-6 pr-6 text-3xl border-r-2 border-gray-400 sm:hidden">
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              GitHub
+              <a href="">GitHub</a>
             </li>
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              YouTube
+              <a href="">YouTube</a>
             </li>
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              Twitter
-            </li>
-          </ul>
-          <ul className="pl-6 pr-6 text-3xl border-r-2 border-gray-400 sm:hidden">
-            <li className="text-gray-400 duration-300 hover:text-gray-700">
-              GitHub
-            </li>
-            <li className="text-gray-400 duration-300 hover:text-gray-700">
-              YouTube
-            </li>
-            <li className="text-gray-400 duration-300 hover:text-gray-700">
-              Twitter
+              <a href="">Twitter</a>
             </li>
           </ul>
           <ul className="pl-6 pr-6 text-3xl border-r-2 border-gray-400 sm:hidden">
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              GitHub
+              <a href="">Discord</a>
             </li>
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              YouTube
+              <a href="">Projects</a>
             </li>
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              Twitter
+              <a href="">soon™</a>
             </li>
           </ul>
           <ul className="pl-6 pr-6 text-3xl sm:hidden">
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              GitHub
+              <a href="">soon™</a>
             </li>
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              YouTube
+              <a href="">soon™</a>
             </li>
             <li className="text-gray-400 duration-300 hover:text-gray-700">
-              Twitter
+              <a href="">soon™</a>
             </li>
           </ul>
         </div>
