@@ -28,7 +28,7 @@ function Navbar() {
         <div className="relative overflow-hidden top-0 h-20 w-full sm:hidden">
           <div className="float-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <a
-              href="/index"
+              href="/"
               className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
             >
               Home
@@ -45,6 +45,12 @@ function Navbar() {
             >
               Github
             </a>
+            <a
+              href="/login"
+              className="float-left p-14 text-center text-3xl no-underline rounded duration-300 hover:-translate-y-3"
+            >
+              Login
+            </a>
           </div>
         </div>
         <motion.div>
@@ -55,7 +61,7 @@ function Navbar() {
             }}
           >
             <li>
-              <a href="/index" className="">
+              <a href="/" className="">
                 Home
               </a>
             </li>
@@ -68,6 +74,9 @@ function Navbar() {
               <a href="https://github.com/aapelix" className="">
                 Github
               </a>
+            </li>
+            <li>
+              <a href="/login">Login</a>
             </li>
           </div>
         </motion.div>

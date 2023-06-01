@@ -5,7 +5,7 @@ function Bottom() {
 
   return (
     <>
-      <div className=" bg-gradient-to-t from-[#191919] to-[#2b2b2b] h-40 w-full absolute top-[calc(100%+740px)]">
+      <div className=" bg-gradient-to-t from-[#191919] to-[#2b2b2b] h-44 w-full absolute top-[calc(100%+740px)]">
         <div className="flex">
           <h1 className="left-1/2 -translate-x-1/2 bottom-44 absolute text-3xl text-center sm:text-2xl text-gray-400">
             Found a{" "}
@@ -27,7 +27,7 @@ function Bottom() {
               <img
                 src="/bug.png"
                 alt=""
-                className="absolute w-36 h-36 object-contain -bottom-8 left-12"
+                className="absolute w-36 h-36 object-contain -bottom-8 left-12 sm:botton-8"
                 onMouseEnter={() => setIsShown(true)}
                 onMouseLeave={() => setIsShown(false)}
                 onClick={() => setIsShown((current) => !current)}
