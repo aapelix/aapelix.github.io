@@ -5,15 +5,81 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --card-color: rgb(23, 23, 23);
+}
+
 * {
-  color: #deecf6;
+  color: #cecfd1;
   font-family: "Ubuntu", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background: #0f172a;
+  background-image: url(/gradient-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.searcharea {
+  display: none;
+  animation: search 300ms;
+}
+
+.searcharea.visible {
+  display: block;
+}
+
+@media only screen and (max-width: 1500px) {
+  body {
+    height: 135vh;
+    background-image: url(/gradient-bg-sm.png);
+  }
+}
+
+body.scroll {
+  overflow: hidden;
 }
 
 .dev {
   font-family: "Oswald", sans-serif;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 500ms;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.card > .card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 10px;
+  position: absolute;
+}
+
+.text-gradient {
+  -webkit-text-fill-color: transparent;
+}
+
+.border-image {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to left, #3956ec, #14dbfa);
 }
