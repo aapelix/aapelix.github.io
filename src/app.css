@@ -1,0 +1,10 @@
+:root {
+  background-color: #272727;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
