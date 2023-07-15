@@ -11,7 +11,7 @@
 </script>
 
 <Router {url}>
-  <nav class="text-xl">
+  <nav class="text-xl m-5">
     <Link class="m-1 duration-300 text-gray-300 hover:text-white" to="/"
       >Home</Link
     >

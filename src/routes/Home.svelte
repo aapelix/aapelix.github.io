@@ -1,9 +1,14 @@
 <script>
   import { fly } from "svelte/transition";
   import Button from "../lib/Button.svelte";
+  import Languages from "../lib/Languages.svelte";
+  import Accordion from "../lib/Accordion.svelte";
 
   let scroll;
+  let rotate;
 </script>
+
+<svelte:window bind:scrollY={scroll} />
 
 <div class="mt-24">
   <h1 class="font-bold text-6xl">Its me, Aapelix</h1>
@@ -11,9 +16,11 @@
   <Button title="Contact me!" />
 </div>
 
-<svelte:window bind:scrollY={scroll} />
+<section id="languages" class="bg-[#3a3a3a] mt-32">
+  <Languages />
+</section>
 
-<section id="projects" class="mt-32 bg-[#1a1a1a] pt-10 pb-10">
+<section id="projects" class="bg-[#2a2a2a] pt-10 pb-10">
   <h1 class="font-bold text-2xl mb-10">My Projects</h1>
   <div class="flex flex-wrap justify-center">
     <a
@@ -85,6 +92,22 @@
     </a>
   </div>
 </section>
-<footer class="bg-[#161616] flex justify-center">
-  <img src="/icon-big.png" class="h-44 m-10" alt="" />
+<section id="faq" class="bg-[#1a1a1a] p-10">
+  <h1 class="text-2xl font-bold">FAQ</h1>
+  <Accordion
+    title="Who I am?"
+    desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi non asperiores praesentium nulla possimus officiis nobis voluptatum suscipit mollitia? Fuga, reprehenderit recusandae? Non ratione id omnis et officia tempora ad?"
+  />
+</section>
+<footer
+  class="bg-[#0a0a0a] flex justify-center"
+  on:mousedown={() => (rotate = 180)}
+  on:mouseup={() => (rotate = 0)}
+>
+  <img
+    src="/icon-big.png"
+    style="transform: rotate({rotate}deg)"
+    class="w-96 duration-500 m-10"
+    alt=""
+  />
 </footer>
