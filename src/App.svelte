@@ -12,14 +12,17 @@
 
 <Router {url}>
   <nav class="text-xl m-5">
-    <Link class="m-1 duration-300 text-gray-300 hover:text-white" to="/"
-      >Home</Link
+    <Link
+      class="m-1 duration-300 text-white font-semibold hover:text-slate-500"
+      to="/">Home</Link
     >
-    <Link class="m-1 duration-300 text-gray-300 hover:text-white" to="discord"
-      >Discord</Link
+    <Link
+      class="m-1 duration-300 text-white font-semibold hover:text-slate-500"
+      to="discord">Discord</Link
     >
-    <Link class="m-1 duration-300 text-gray-300 hover:text-white" to="github"
-      >GitHub</Link
+    <Link
+      class="m-1 duration-300 text-white font-semibold hover:text-slate-500"
+      to="github">GitHub</Link
     >
   </nav>
   <div>

@@ -1,5 +1,6 @@
 :root {
-  background-color: #4a4a4a;
+  background-color: #141414;
+  background-image: url(/image.png);
   color: white;
   text-align: center;
   overflow-x: hidden;
