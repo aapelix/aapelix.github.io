@@ -5,9 +5,24 @@
 
   let scroll;
   let rotate;
+
+  let showScroll = false;
 </script>
 
 <svelte:window bind:scrollY={scroll} />
+
+{#if showScroll}
+  <p class="fixed">{scroll}</p>
+{/if}
+
+{#if scroll > 454}
+  <img
+    transition:fly={{ y: 200, opacity: 1 }}
+    class="fixed h-44 rotate-180 top-0 right-44 z-10"
+    src="/bgbgbg2.png"
+    alt=""
+  />
+{/if}
 
 <div in:fly={{ y: -100 }}>
   <div class="pb-32 pt-24">
@@ -16,9 +31,14 @@
       I'm programmer from Finland
     </p>
     <Button title="Contact me!" />
+    <img
+      src="/bgbgbg2.png"
+      class="h-44 absolute -translate-y-12 left-44 z-0 lg:left-96 lg:translate-x-56"
+      alt=""
+    />
   </div>
 
-  <section id="projects" class="bg-[#2a2a2a] pt-10 pb-10">
+  <section id="projects" class="bg-[#2a2a2a] pt-10 pb-10 z-10">
     <h1 class="font-bold text-2xl mb-10">My Projects</h1>
     <div class="flex flex-wrap justify-center">
       <a

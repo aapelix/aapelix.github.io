@@ -18,19 +18,19 @@
 
 <nav class="text-xl m-5">
   <a
-    class="m-1 duration-300 text-white font-semibold hover:text-slate-500"
+    class="m-1 duration-300 text-white font-semibold hover:text-gray-300"
     href="/">Home</a
   >
   <a
-    class="m-1 duration-300 text-white font-semibold hover:text-slate-500"
+    class="m-1 duration-300 text-white font-semibold hover:text-gray-300"
     href="#/discord">Discord</a
   >
   <a
-    class="m-1 duration-300 text-white font-semibold hover:text-slate-500"
+    class="m-1 duration-300 text-white font-semibold hover:text-gray-300"
     href="#/github">GitHub</a
   >
   <a
-    class="m-1 duration-300 text-white font-semibold hover:text-slate-500"
+    class="m-1 duration-300 text-white font-semibold hover:text-gray-300"
     href="#/account">Account</a
   >
 </nav>
