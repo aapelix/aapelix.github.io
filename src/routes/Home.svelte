@@ -1,10 +1,11 @@
 <script>
-  import { fly, slide } from "svelte/transition";
+  import { fly, scale } from "svelte/transition";
   import Button from "../lib/Button.svelte";
   import Accordion from "../lib/Accordion.svelte";
 
   let scroll;
-  let rotate;
+  let buttonScale;
+  let isShow = true;
 
   let showScroll = false;
 </script>
@@ -18,7 +19,7 @@
 {#if scroll > 454}
   <img
     transition:fly={{ y: 200, opacity: 1 }}
-    class="fixed h-44 rotate-180 top-0 right-44 z-10"
+    class="fixed h-44 rotate-180 top-0 right-44 z-0"
     src="/bgbgbg2.png"
     alt=""
   />
@@ -31,14 +32,19 @@
       I'm programmer from Finland
     </p>
     <Button title="Contact me!" />
-    <img
-      src="/bgbgbg2.png"
-      class="h-44 absolute -translate-y-12 left-44 z-0 lg:left-96 lg:translate-x-56"
-      alt=""
-    />
+    {#if isShow}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <img
+        out:fly={{ y: 200, opacity: 1 }}
+        src="/bgbgbg2.png"
+        on:click={() => (isShow = false)}
+        class="h-44 absolute -translate-y-12 left-44 z-0 lg:left-96 lg:translate-x-56 overflow-hidden"
+        alt=""
+      />
+    {/if}
   </div>
 
-  <section id="projects" class="bg-[#2a2a2a] pt-10 pb-10 z-10">
+  <section id="projects" class="bg-[#2a2a2a] pt-10 pb-10 z-20">
     <h1 class="font-bold text-2xl mb-10">My Projects</h1>
     <div class="flex flex-wrap justify-center">
       <a
@@ -118,13 +124,13 @@
     />
   </section>
   <footer
-    class="bg-[#0a0a0a] flex justify-center"
-    on:mousedown={() => (rotate = 180)}
-    on:mouseup={() => (rotate = 0)}
+    class="bg-[#111111] flex justify-center"
+    on:mousedown={() => (buttonScale = 1.2)}
+    on:mouseup={() => (buttonScale = 1)}
   >
     <img
       src="/icon-big.png"
-      style="transform: rotate({rotate}deg)"
+      style="transform: scale({buttonScale})"
       class="w-96 duration-500 m-10"
       alt=""
     />

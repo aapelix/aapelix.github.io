@@ -29,9 +29,5 @@
     class="m-1 duration-300 text-white font-semibold hover:text-gray-300"
     href="#/github">GitHub</a
   >
-  <a
-    class="m-1 duration-300 text-white font-semibold hover:text-gray-300"
-    href="#/account">Account</a
-  >
 </nav>
 <Router {routes} />
