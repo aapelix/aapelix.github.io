@@ -10,5 +10,5 @@
   on:mouseleave={() => (scale = 1)}
   on:click={() => (window.location.href = "mailto:hello@aapelix.dev")}
   style="transform: scale({scale})"
-  class="duration-300 text-2xl bg-blue-500 p-2 rounded-lg m-2">{title}</button
+  class="duration-300 text-2xl bg-secondary p-2 rounded-lg m-2">{title}</button
 >

@@ -1,9 +1,24 @@
 :root {
-  background-color: #141414;
-  background-image: url(/image.png);
-  color: white;
+  background-color: #2f2f2f;
+  background-image: url(/layered-steps-haikei.png);
+  background-position: 10px 380px;
+  background-repeat: repeat-x;
+  color: #e8e8e8;
   text-align: center;
   overflow-x: hidden;
+}
+
+.scroll-lock {
+  overflow-y: hidden;
+}
+
+/* 	inside 'global.css' */
+:global(html, body) {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px solid darkblue;
 }
 
 @tailwind base;
