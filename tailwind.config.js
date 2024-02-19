@@ -1,15 +1,15 @@
 const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.svelte"
+    "./src/**/*.{ts,tsx}",
+    "./index.html"
   ],
   theme: {
     extend: {},
     screens: {
-      "lg": "500px",
+      "lg": "550px",
       "sm": "100px",
     },
     colors: {
@@ -19,7 +19,7 @@ export default {
       "primary": "#66008c",
       "secondary": "#1b1847",
       "accent": "#6902b7",
-    }
+    },
   },
   plugins: [],
 }

@@ -1,28 +1,26 @@
 {
-  "name": "vite-project",
+  "name": "rspack-react-ts-starter",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.3",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.26",
-    "svelte": "^3.57.0",
-    "tailwindcss": "^3.3.3",
-    "vite": "^4.3.2"
+    "dev": "NODE_ENV=development rspack serve",
+    "build": "NODE_ENV=production rspack build"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.26.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
-    "lucide-react": "^0.312.0",
-    "svelte-spa-router": "^3.3.0",
-    "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "framer-motion": "^11.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rspack/cli": "0.5.4",
+    "@rspack/core": "0.5.4",
+    "@rspack/plugin-react-refresh": "0.5.4",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "postcss-loader": "^8.1.0",
+    "react-refresh": "^0.14.0",
+    "tailwindcss": "^3.4.1"
   }
 }
