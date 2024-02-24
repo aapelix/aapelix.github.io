@@ -160,6 +160,9 @@ function App() {
               </div>
             </div>
           </div>
+          <p className="text-center cursor-pointer text-gray-500 text-xl">
+            View all
+          </p>
         </div>
         <div id="blog" className="bg-zinc-800 w-screen mt-0">
           <h1 className="font-extrabold text-5xl mt-36 pb-20 text-center">
