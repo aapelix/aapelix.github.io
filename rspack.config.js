@@ -19,6 +19,10 @@ module.exports = {
 				type: "asset"
 			},
 			{
+        		test: /\.png$/,
+        		type: 'asset',
+      		},
+			{
 				test: /\.(jsx?|tsx?)$/,
 				use: [
 					{

@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-import github from "./assets/github-mark-white.svg";
+
+import github from "./assets/github-px.png";
+import yt from "./assets/yt-px.png";
+import dc from "./assets/dc-px.png";
+import patreon from "./assets/patreon-px.png";
 
 function App() {
   const redirect = () => {
@@ -10,11 +14,13 @@ function App() {
     <div className="poppins-regular">
       <nav className="fixed w-full lg:right-10 mt-5 sm:text-center lg:text-right flex flex-row lg:justify-end sm:justify-center">
         <motion.div initial={{ y: -100 }} animate={{ y: 0 }}>
-          <a
-            className="p-2 hover-underline-animation"
-            href="https://github.com/aapelix/"
-          >
-            GitHub
+          <a className="p-2" href="https://github.com/aapelix/">
+            <img
+              className="hover:-translate-y-2 m-2 w-12 duration-300"
+              style={{ imageRendering: "pixelated" }}
+              src={github}
+              alt=""
+            />
           </a>
         </motion.div>
         <motion.div
@@ -22,11 +28,13 @@ function App() {
           animate={{ y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <a
-            className="p-2 hover-underline-animation"
-            href="https://youtube.com/@aapelix/"
-          >
-            YouTube
+          <a className="p-2" href="https://youtube.com/@aapelix/">
+            <img
+              className="hover:-translate-y-2 m-2 w-12 duration-300"
+              style={{ imageRendering: "pixelated" }}
+              src={yt}
+              alt=""
+            />
           </a>
         </motion.div>
         <motion.div
@@ -34,11 +42,13 @@ function App() {
           animate={{ y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <a
-            className="p-2 hover-underline-animation"
-            href="https://github.com/aapelix/"
-          >
-            Discord
+          <a className="p-2" href="https://github.com/aapelix/">
+            <img
+              className="hover:-translate-y-2 m-2 w-12 duration-300"
+              style={{ imageRendering: "pixelated" }}
+              src={dc}
+              alt=""
+            />
           </a>
         </motion.div>
         <motion.div
@@ -46,11 +56,13 @@ function App() {
           animate={{ y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <a
-            className="p-2 hover-underline-animation"
-            href="https://x.com/aapelix1/"
-          >
-            X
+          <a className="p-2" href="https://patreon.com/Aapelix">
+            <img
+              className="hover:-translate-y-2 m-2 w-12 duration-300"
+              style={{ imageRendering: "pixelated" }}
+              src={patreon}
+              alt=""
+            />
           </a>
         </motion.div>
       </nav>
@@ -93,81 +105,6 @@ function App() {
               </div>
             </a>
           </div>
-        </div>
-        <div id="projects" className="bg-zinc-900 w-screen mt-24 pb-24">
-          <h1 className="font-extrabold text-5xl mt-36 pb-20 text-center">
-            My projects
-          </h1>
-          <div className="flex w-screen justify-center flex-wrap">
-            {/* PROJECT */}
-
-            <div className="w-96 h-64 rounded-3xl mclc bg-[url('./assets/mclc-2.png')] hover:scale-110 duration-300 m-5 bg-contain">
-              <h1 className="text-3xl text-center m-5 font-bold">MCLC Rust</h1>
-              <div className="bg-zinc-800 h-32 rounded-3xl translate-y-16 duration-300">
-                <div className="m-3">
-                  <p className="m-5 translate-y-2 text-gray-300">
-                    Minecraft Launcher Core Rust is a crate for rust to download
-                    and launch minecraft versions and more!
-                  </p>
-                  <a href="https://github.com/aapelix/mc_launcher_core_rs">
-                    <img
-                      className="w-8 m-5 h-8 -translate-y-2"
-                      src={github}
-                      alt=""
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* PROJECT */}
-
-            <div className="w-96 h-64 rounded-3xl mclc bg-[url('./assets/banner.png')] hover:scale-110 duration-300 m-5 bg-contain">
-              <h1 className="text-3xl text-center m-5 font-bold">
-                Project KTJNKEIO
-              </h1>
-              <div className="bg-zinc-800 rounded-3xl translate-y-16 h-32 duration-300">
-                <div className="m-3">
-                  <p className="m-5 translate-y-2 text-gray-300">
-                    A work in progress wip game made with Rust & Bevy
-                  </p>
-                  <a href="https://github.com/aapelix/project-ktjnkeio">
-                    <img
-                      className="w-8 m-5 h-8 -translate-y-2"
-                      src={github}
-                      alt=""
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* PROJECT */}
-
-            <div className="w-96 h-64 rounded-3xl mclc bg-[url('https://wholesgame.com/wp-content/uploads/Minecraft-wallpaper.jpg')] hover:scale-110 duration-300 m-5">
-              <h1 className="text-3xl text-center m-5 font-bold">Pruschr</h1>
-              <div className="bg-zinc-800 rounded-3xl translate-y-16 h-32 duration-300">
-                <div className="m-3">
-                  <p className="m-5 translate-y-2 text-gray-300">Soon to be</p>
-                  <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
-                    <img
-                      className="w-8 m-5 h-8 -translate-y-2"
-                      src={github}
-                      alt=""
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p className="text-center cursor-pointer text-gray-500 text-xl">
-            View all
-          </p>
-        </div>
-        <div id="blog" className="bg-zinc-800 w-screen mt-0">
-          <h1 className="font-extrabold text-5xl mt-36 pb-20 text-center">
-            Blog soonTM
-          </h1>
         </div>
       </div>
     </div>
