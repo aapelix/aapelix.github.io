@@ -7,7 +7,7 @@ import patreon from "./assets/patreon-px.png";
 
 function App() {
   const redirect = () => {
-    location.assign("mailto:hello@aapelix.dev");
+    location.assign("mailto:aapelix@aapelix.dev");
   };
 
   return (
