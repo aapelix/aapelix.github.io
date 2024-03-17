@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { Resend } from "resend";
+
+const resend = new Resend("re_Cr7JqYy9_76CmaafJZLP3fsfh2ytpyHrt");
 
 import github from "./assets/github-px.png";
 import yt from "./assets/yt-px.png";
@@ -9,6 +12,21 @@ function App() {
   const redirect = () => {
     location.assign("mailto:aapelix@aapelix.dev");
   };
+
+  function handleSubmit(e: { preventDefault: () => void; target: any }) {
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const formJson = Object.fromEntries(formData.entries());
+    const email = formJson.email.toString;
+
+    resend.emails.send({
+      from: "aapelix@aapelix.dev",
+      to: "mcaapelix@gmail.com",
+      subject: "Hello World",
+      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+    });
+  }
 
   return (
     <div className="poppins-regular">
@@ -85,28 +103,46 @@ function App() {
             Contact me!
           </button>
         </motion.button>
+      </div>
+      <div id="projects" className="bg-[#1a1a1a] w-full h-screen mt-96">
+        <div className="bg-[#CD8700] w-96 h-96 rounded-full blur-[400px] absolute -bottom-96 translate-y-80" />
+        <div className="bg-[#6D9098] w-[15rem] h-[15rem] rounded-full blur-[200px] absolute -bottom-96 translate-y-80 right-0" />
 
-        <div className="w-screen flex flex-col items-center">
-          <p className="text-gray-500 mt-44 text-xl">Jump to</p>
-          <div className="flex flex-row flex-wrap justify-center">
-            <a href="#projects">
-              <div className="bg-zinc-900 w-64 text-center py-10 rounded-3xl m-2 mt-5 hover:bg-zinc-800 duration-300">
-                <h1 className="text-3xl">Projects</h1>
-              </div>
-            </a>
-            <a href="#blog">
-              <div className="bg-zinc-900 w-64 text-center py-10 rounded-3xl m-2 mt-5 hover:bg-zinc-700 duration-300">
-                <h1 className="text-3xl">Blog</h1>
-              </div>
-            </a>
-            <a href="">
-              <div className="bg-zinc-900 w-64 text-center py-10 rounded-3xl m-2 mt-5 hover:bg-zinc-600 duration-300">
-                <h1 className="text-3xl">The moon</h1>
-              </div>
-            </a>
-          </div>
+        <div className="flex flex-row flex-wrap justify-center mt-10">
+          <button className="bg-[#0a0a0a] hover:scale-110 duration-300 w-36 h-36 rounded-3xl m-2 mt-5"></button>
+          <button className="bg-[#0a0a0a] hover:scale-110 duration-300 w-36 h-36 rounded-3xl m-2 mt-5"></button>
+          <button className="bg-[#0a0a0a] hover:scale-110 duration-300 w-36 h-36 rounded-3xl m-2 mt-5"></button>
+          <button className="bg-[#0a0a0a] hover:scale-110 duration-300 w-36 h-36 rounded-3xl m-2 mt-5"></button>
+          <button className="bg-[#0a0a0a] hover:scale-110 duration-300 w-36 h-36 rounded-3xl m-2 mt-5"></button>
+        </div>
+
+        <div className="flex justify-center mt-10">
+          <div className="bg-[#0a0a0a] w-[80rem] h-[40rem] rounded-3xl z-0 mx-5"></div>
         </div>
       </div>
+
+      <footer className="z-0 h-max pt-24 text-center pb-10 bg-[#0a0a0a]">
+        <div>
+          <h1 className="text-9xl font-bold">aapelix</h1>
+        </div>
+
+        <form className="mt-10" onSubmit={handleSubmit}>
+          <label className="block">
+            <span className="block font-medium text-white text-xl">
+              Subscribe for my news letter
+            </span>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@domain.com"
+              className="peer ... text-black pt-2 pb-2 text-xl rounded-xl px-1"
+            />
+            <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+              Please provide a valid email address.
+            </p>
+          </label>
+        </form>
+      </footer>
     </div>
   );
 }
