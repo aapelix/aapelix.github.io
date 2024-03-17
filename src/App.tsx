@@ -14,6 +14,8 @@ function App() {
   };
 
   function handleSubmit(e: { preventDefault: () => void; target: any }) {
+    e.preventDefault();
+
     const form = e.target;
     const formData = new FormData(form);
 
@@ -122,6 +124,8 @@ function App() {
       </div>
 
       <footer className="z-0 h-max pt-24 text-center pb-10 bg-[#0a0a0a]">
+        <div className="w-40 h-40 bg-[#c87aef] absolute rounded-full blur-[100px] translate-y-36 right-0" />
+
         <div>
           <h1 className="text-9xl font-bold">aapelix</h1>
         </div>
