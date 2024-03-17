@@ -1,7 +1,4 @@
 import { motion } from "framer-motion";
-import { Resend } from "resend";
-
-const resend = new Resend("re_Cr7JqYy9_76CmaafJZLP3fsfh2ytpyHrt");
 
 import github from "./assets/github-px.png";
 import yt from "./assets/yt-px.png";
@@ -12,23 +9,6 @@ function App() {
   const redirect = () => {
     location.assign("mailto:aapelix@aapelix.dev");
   };
-
-  function handleSubmit(e: { preventDefault: () => void; target: any }) {
-    e.preventDefault();
-
-    const form = e.target;
-    const formData = new FormData(form);
-
-    const formJson = Object.fromEntries(formData.entries());
-    const email = formJson.email.toString;
-
-    resend.emails.send({
-      from: "aapelix@aapelix.dev",
-      to: "mcaapelix@gmail.com",
-      subject: "Hello World",
-      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
-    });
-  }
 
   return (
     <div className="poppins-regular">
@@ -130,7 +110,7 @@ function App() {
           <h1 className="text-9xl font-bold">aapelix</h1>
         </div>
 
-        <form className="mt-10" onSubmit={handleSubmit}>
+        <form className="mt-10" onSubmit={() => console.log("amogus")}>
           <label className="block">
             <span className="block font-medium text-white text-xl">
               Subscribe for my news letter
